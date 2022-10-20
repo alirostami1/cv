@@ -16,6 +16,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{ragged2e}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -52,6 +53,21 @@
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
+
+\newcommand{\resumeItemElip}[1]{
+  \item\small{
+    \textellipsis{#1}
+  }
+}
+
+\newcommand{\resumeSubheadingNoDate}[3]{
+  \vspace{-1pt}\item
+    \textbf{#1}{: #2 \vspace{-15pt}} \\ 
+    \begin{FlushRight}
+      \textit{~~~~~~~~\small{- #3} }
+    \end{FlushRight}\vspace{-15pt}
+}
+
 
 % Just in case someone needs a heading that does not need to be in a list
 \newcommand{\resumeHeading}[4]{
@@ -110,16 +126,18 @@
 %--------SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-  \resumeSubItem{Languages}{Javascript, Typescript, Go, Bash, Arduino, C++, SQL.}
+  \resumeSubItem{Programming Languages}{Javascript, Typescript, Go, Bash, CSS, Arduino, C++, SQL, TeX.}
   \resumeSubItem{Frameworks/Libraries}{}
   \resumeItemListStart
     \resumeItem{Frontend}
-      {React, Next, Tailwind}
+      {React, Next, Tailwind, Bootstrap, Material}
     \resumeItem{Backend}
-      {Express, Nest, Gin, Echo}
+      {Express, Nest, Gin, Mux}
     \resumeItemListEnd
-  \resumeSubItem{Technologies}{Git, Docker, Nodejs, PostgreSQL, MongoDB, Kubernetes}
-  \resumeSubItem{Platforms}{Linux, Web, Windows, Arduino, Raspberry, AWS, Hetzner Cloud}
+  \resumeSubItem{Technologies}{Git, Docker, Nodejs, Nginx, PostgreSQL, MongoDB, Redis, Kubernetes}
+  \resumeSubItem{Platforms}{Linux, AWS, Windows, Arduino, Raspberry, }
+  \resumeSubItem{Others}{RESTful, GraphQL, WebSocket, Microservices, CI/CD}
+  \resumeSubItem{Languages}{English, Farsi(Persian)}
 \resumeSubHeadingListEnd
 %-------------------------------------------
 
@@ -132,12 +150,12 @@
   \resumeSubHeadingListStart
     \resumeSubheading
     {Ardoak Smart Home}{Mashhad, Iran}
-    {Founder, Software Engineer (Self-emplyment)}{Jan 2022 - Present}
+    {Founder, Software Engineer (Self-employment)}{Jan 2022 - Present}
     \resumeItemListStart
       \resumeItem{Arduino}
-        {Arduino is an open-source single-board microcontroller, we used these with Ardoak software as core of the system.}
+        {Arduino is an open-source single-board microcontroller, we used Arduinos equipped with Ardoak software as the core of the system.}
       \resumeItem{ESP8266}
-        {The ESP8266 is a low-cost Wi-Fi microchip, used it to make things(wall sockets, light bulbs etc.) smart}
+        {The ESP8266 is a low-cost Wi-Fi microchip that was used to make Things(wall sockets, light bulbs etc.) smart}
     \resumeItemListEnd
     
   \resumeSubHeadingListEnd
@@ -146,18 +164,24 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{Portfolio}
-      {My personal portfolio website that is 70\% completed.}
-    \resumeSubItem{Ardoak}
-      {Commercial Arduino software for an smart alarm system for houses.}
-    \resumeSubItem{Baagh}
-      {Not yet open-source software written in Go programming language for managing RaspberryPi's GPIO pins without programming.}
-    \resumeSubItem{ReClass}
-      {Open-source software to automaticly record online classes on daan.ir and save them as x265 encoded video using FFmpeg for encoding.}
-    \resumeSubItem{Paat}
-      {Open-source software to print anything as a table, also a Go package}
-    \resumeSubItem{Instabot}
-      {Open-source software to simulate human interactions with instagram and gain followers without getting banned.}
+    \resumeSubheadingNoDate{Portfolio}
+    {My portfolio website. it is 70\% completed.}
+    {Typescript, Go, Next, TailwindCSS}
+    \resumeSubheadingNoDate{Ardoak}
+    {Commercial Arduino software for a smart alarm system for houses.}
+    {Arduino Nano, Arduino Uno, ESP8266, ESP32, C++}
+    \resumeSubheadingNoDate{Baagh}
+    {Not yet open-source software written in Go programming language for managing RaspberryPi's GPIO pins without programming.}
+    {RaspberryPi 4, Go, Tinygo, C++}
+    \resumeSubheadingNoDate{ReClass}
+    {Open-source software to automatically record online classes on www.daan.ir and save them as x265 encoded video using FFmpeg for encoding.}
+    {Typescript, Nodejs, Puppeteer}
+    \resumeSubheadingNoDate{Paat}
+    {Open-source software to print anything as a table, also a Go package.}
+    {Go, JSON, TOML}
+    \resumeSubheadingNoDate{Instabot}
+    {Open-source software to simulate human interactions with Instagram and gain followers without getting banned.}
+    {Python}
   \resumeSubHeadingListEnd
 
 \section{Volunteer Experience}
@@ -167,7 +191,7 @@
     {Software Engineer}{Jun 2022 - Present}
     \resumeItemListStart
       \resumeItem{React}
-        {React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. Worked on frontend authentication flow and UI/UX.}
+        {React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. Worked on front-end authentication flow and UI/UX.}
       \resumeItem{Express}
         {Express, is a backend web application framework for building RESTful APIs with Node.js. Worked on complex RESTful APIs, user authentication and website security}
     \resumeItemListEnd
